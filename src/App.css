@@ -13,11 +13,7 @@ header {
   align-items: center;
 }
 
-h1,
-h2,
-h4,
-p,
-li {
+h1, h2, h4, p, li {
   color: whitesmoke;
   text-align: center;
 }
@@ -27,17 +23,18 @@ li {
   justify-content: center;
   align-items: center;
   margin-top: 8vh;
+  flex-wrap: wrap;
 }
 
 .taskdashboard input {
-  padding: 2vh 15px; /* Adjusted padding */
+  padding: 2vh 2%; /* Adjusted padding with percentage */
   text-align: center;
   border-radius: 3vh;
   background-color: transparent;
   border: 2px solid whitesmoke;
   color: whitesmoke;
-  margin-right: 2vh;
-  border-width: 1px;
+  margin-bottom: 2vh;
+  width: 50%; /* Set input width with percentage */
 }
 
 .taskdashboard button {
@@ -48,13 +45,8 @@ li {
   transition-duration: 0.4s;
   padding: 1.5vh;
   border-radius: 3vh;
-  border-width: 1px;
-}
-
-.taskdashboard button:hover {
-  background-color: #04aa6d;
-  color: white;
-  cursor: pointer;
+  margin-bottom: 2vh;
+  margin-left: 2vh;
 }
 
 .tasks {
@@ -67,15 +59,15 @@ h4 {
 }
 
 li {
-  position: relative;
-  margin: 5vh;
+  width: 90%; /* Set a percentage width for better responsiveness */
+  margin: 2vh auto; /* Center the list item and adjust margin */
   text-align: left;
   background-color: transparent;
-  padding: 0px;
-  border: 2px solid whitesmoke; /* Changed border property */
-  border-radius: 5px; /* Changed border-radius property */
+  padding: 1vh;
+  border: 2px solid whitesmoke;
+  border-radius: 5px;
   list-style: none;
-  border-width: 1px;
+  top: 4vh;
 }
 
 .tasks-list {
@@ -87,7 +79,7 @@ li {
 .icons-list {
   position: relative;
   bottom: 10px;
-  left: 130px;
+  left: 0;
 }
 
 hr {
@@ -96,11 +88,11 @@ hr {
 
 .icons {
   position: relative;
-  left: 70vh; /* Adjusted left property */
+  text-align: center;
 }
 
 .icons i {
-  margin: 4px;
+  margin-left: 90vh; /* Adjusted margin with percentage */
   font-size: large;
   cursor: pointer;
   transition: 0.1s;
@@ -118,31 +110,31 @@ hr {
   margin-top: 4vh;
 }
 
-@media only screen and (max-width: 600px) {
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+  .taskdashboard input {
+    width: 100%; /* Set input width to 100% for smaller screens */
   }
 
-  .icons-list i {
-    position: relative;
-    right: 55vh;
+  .icons i {
+    margin-left: 38vh; /* Adjusted margin with percentage */
+    font-size: large;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+  .taskdashboard input {
+    padding: 2vh 1%; /* Adjusted padding with percentage */
+    text-align: center;
+    border-radius: 3vh;
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    color: whitesmoke;
+    margin-bottom: 2vh;
+    width: 50%; /* Set input width with percentage */
   }
 
-  .tasks-list {
-    position: relative;
-    top: 14px;
-    left: 10px;
+  #todo-header,hr{
+    margin-bottom : 4vh;
   }
-
-  .taskdashboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 4vh;
-  }
-
-  p {
-    font-size: small;
-  }
+  
 }
