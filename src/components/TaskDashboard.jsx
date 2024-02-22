@@ -11,7 +11,14 @@ export default function TaskDashboard(props) {
       props.updateList(inputText);
       setInputText("");
     }
-  } 
+  }
+
+  function handleEnterPress(e) {
+    if (e.key === "Enter") {
+      props.updateList(inputText);
+      setInputText("");
+    }
+  }
 
   return (
     <div className="taskdashboard">
@@ -20,6 +27,7 @@ export default function TaskDashboard(props) {
         placeholder="Enter Your Tasks"
         onChange={(e) => setInputText(e.target.value)}
         value={inputText}
+        onKeyPress={handleEnterPress}
       />
       <button onClick={handleAddBtn}>+</button>
     </div>
