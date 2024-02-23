@@ -30,6 +30,7 @@ h1, h2, h4, p, li {
   padding: 2vh 2%; /* Adjusted padding with percentage */
   text-align: center;
   border-radius: 3vh;
+  border-thickness : 1px;
   background-color: transparent;
   border: 2px solid whitesmoke;
   color: whitesmoke;
@@ -42,11 +43,17 @@ h1, h2, h4, p, li {
   background-color: transparent;
   color: whitesmoke;
   border: 2px solid #04aa6d;
+  border-thickness : 1px;
   transition-duration: 0.4s;
   padding: 1.5vh;
   border-radius: 3vh;
   margin-bottom: 2vh;
   margin-left: 2vh;
+}
+
+.taskdashboard button:hover{
+   background-color: #04aa6d;
+  cursor : pointer;
 }
 
 .tasks {
@@ -66,6 +73,7 @@ li {
   padding: 1vh;
   border: 2px solid whitesmoke;
   border-radius: 5px;
+  border-thickness : 1px;
   list-style: none;
   top: 4vh;
 }
