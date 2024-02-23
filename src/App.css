@@ -97,7 +97,6 @@ hr {
 
 .icons {
   position: relative;
-  text-align: center;
   bottom: 10px;
 }
 
@@ -110,6 +109,7 @@ hr {
 
 .icons i:hover {
   transform: scale(1.2);
+  color : red
 }
 
 #todo-header {
