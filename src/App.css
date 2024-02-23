@@ -13,7 +13,11 @@ header {
   align-items: center;
 }
 
-h1, h2, h4, p, li {
+h1,
+h2,
+h4,
+p,
+li {
   color: whitesmoke;
   text-align: center;
 }
@@ -30,9 +34,8 @@ h1, h2, h4, p, li {
   padding: 2vh 2%; /* Adjusted padding with percentage */
   text-align: center;
   border-radius: 3vh;
-  border-thickness : 1px;
   background-color: transparent;
-  border: 2px solid whitesmoke;
+  border: 1px solid whitesmoke;
   color: whitesmoke;
   margin-bottom: 2vh;
   width: 50%; /* Set input width with percentage */
@@ -42,8 +45,7 @@ h1, h2, h4, p, li {
   font-size: 3vh;
   background-color: transparent;
   color: whitesmoke;
-  border: 2px solid #04aa6d;
-  border-thickness : 1px;
+  border: 1px solid #04aa6d;
   transition-duration: 0.4s;
   padding: 1.5vh;
   border-radius: 3vh;
@@ -51,9 +53,9 @@ h1, h2, h4, p, li {
   margin-left: 2vh;
 }
 
-.taskdashboard button:hover{
-   background-color: #04aa6d;
-  cursor : pointer;
+.taskdashboard button:hover {
+  background-color: #04aa6d;
+  cursor: pointer;
 }
 
 .tasks {
@@ -67,13 +69,12 @@ h4 {
 
 li {
   width: 90%; /* Set a percentage width for better responsiveness */
-  margin: 2vh auto; /* Center the list item and adjust margin */
+  margin: 3vh auto; /* Center the list item and adjust margin */
   text-align: left;
   background-color: transparent;
   padding: 1vh;
-  border: 2px solid whitesmoke;
+  border: 1px solid whitesmoke;
   border-radius: 5px;
-  border-thickness : 1px;
   list-style: none;
   top: 4vh;
 }
@@ -97,6 +98,7 @@ hr {
 .icons {
   position: relative;
   text-align: center;
+  bottom: 10px;
 }
 
 .icons i {
@@ -110,18 +112,26 @@ hr {
   transform: scale(1.2);
 }
 
-.icon-delete:hover {
-  color: red;
-}
-
 #todo-header {
   margin-top: 4vh;
+}
+
+hr {
+  position: relative;
+  bottom: 8px;
 }
 
 /* Media Query for smaller screens */
 @media screen and (max-width: 600px) {
   .taskdashboard input {
     width: 100%; /* Set input width to 100% for smaller screens */
+  }
+
+  h4,
+  p {
+    color: whitesmoke;
+    text-align: center;
+    font-size: small;
   }
 
   .icons i {
@@ -141,8 +151,8 @@ hr {
     width: 50%; /* Set input width with percentage */
   }
 
-  #todo-header,hr{
-    margin-bottom : 4vh;
+  #todo-header,
+  hr {
+    margin-bottom: 4vh;
   }
-  
 }
